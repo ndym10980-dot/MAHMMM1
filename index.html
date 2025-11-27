@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>موسوعة التاريخ الإسلامي الذهبية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Amiri', 'serif'],
+              kufi: ['Reem Kufi', 'sans-serif'],
+            },
+            colors: {
+              islamic: {
+                base: '#fdf6e3', // Parchment color
+                dark: '#042f2e', // Deep Teal
+                primary: '#0d9488', // Teal
+                gold: '#b45309', // Dark Gold
+                accent: '#d97706', // Gold
+                text: '#292524', // Warm Black
+              }
+            },
+            backgroundImage: {
+              'arabesque': "url('https://www.transparenttextures.com/patterns/arabesque.png')",
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fdf6e3;
+        color: #292524;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fdf6e3; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #b45309; 
+        border: 2px solid #fdf6e3;
+        border-radius: 99px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #042f2e; 
+      }
+      .ornament-border {
+        border: 1px solid #d97706;
+        outline: 4px double #d97706;
+        outline-offset: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="font-serif antialiased selection:bg-islamic-gold selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
